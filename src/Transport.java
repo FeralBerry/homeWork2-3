@@ -1,6 +1,10 @@
 public abstract class Transport implements MeansOfTransportation{
     private String modelName;
     private int wheelsCount;
+    public Transport(String name, int wheelsCount){
+        this.modelName = name;
+        this.wheelsCount = wheelsCount;
+    }
     public int getWheelsCount() {
         return wheelsCount;
     }

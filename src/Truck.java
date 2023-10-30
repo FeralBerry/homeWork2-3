@@ -1,4 +1,7 @@
 public class Truck extends Transport{
+    public Truck(String name, int wheelsCount) {
+        super(name,wheelsCount);
+    }
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
