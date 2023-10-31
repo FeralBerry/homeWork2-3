@@ -2,9 +2,11 @@ public class Truck extends Transport{
     public Truck(String name, int wheelsCount) {
         super(name,wheelsCount);
     }
-    public void checkEngine() {
+    @Override
+    public void checkEngine(){
         System.out.println("Проверяем двигатель");
     }
+    @Override
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }

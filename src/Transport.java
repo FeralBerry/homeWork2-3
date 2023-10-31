@@ -1,4 +1,4 @@
-public abstract class Transport implements MeansOfTransportation{
+public abstract class Transport implements TypesOfWork{
     private String modelName;
     private int wheelsCount;
     public Transport(String name, int wheelsCount){
@@ -10,12 +10,6 @@ public abstract class Transport implements MeansOfTransportation{
     }
     public String getModelName() {
         return modelName;
-    }
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
     }
     public void updateTyre() {
         System.out.println("Меняем покрышку");

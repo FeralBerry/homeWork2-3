@@ -6,4 +6,14 @@ public class Bicycle extends Transport{
     public String toString(){
         return super.toString() + getModelName();
     }
+
+    @Override
+    public void checkEngine() {
+
+    }
+
+    @Override
+    public void checkTrailer() {
+
+    }
 }
