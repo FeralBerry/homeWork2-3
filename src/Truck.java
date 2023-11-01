@@ -2,16 +2,20 @@ public class Truck extends Transport{
     public Truck(String name, int wheelsCount) {
         super(name,wheelsCount);
     }
-    @Override
-    public void checkEngine(){
-        System.out.println("Проверяем двигатель");
+    // инкапсуляция
+    private String checkEngine(){
+        return "Проверяем двигатель грузовика";
     }
-    @Override
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+    // инкапсуляция
+    private String checkTrailer() {
+        return "Проверяем прицеп грузовика";
     }
+    // полиморфизм и перегрузка
     @Override
     public String toString(){
-        return super.toString() + getModelName();
+        return super.toString() + "\n"
+                + checkEngine() + "\n"
+                + checkTrailer() + "\n"
+                + super.updateTyre();
     }
 }

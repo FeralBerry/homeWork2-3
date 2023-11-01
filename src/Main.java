@@ -1,7 +1,21 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+        /* 1 реализация полиморфизма через интерфейс
+        TypesOfWork car1 = new Car("car1", 4);
+        TypesOfWork car2 = new Car("car2", 4);
+        TypesOfWork truck1 = new Truck("truck1", 6);
+        TypesOfWork truck2 = new Truck("truck2", 8);
+        TypesOfWork bicycle1 = new Bicycle("bicycle1", 2);
+        TypesOfWork bicycle2 = new Bicycle("bicycle2", 2);
+
+        List<TypesOfWork> transport = Arrays.asList(car1, car2, truck1, truck2, bicycle1, bicycle2);
+        for (TypesOfWork value : transport) {
+            System.out.println(value.updateTyre());
+        }*/
+        // 2 реализация полиморфизма через toString
         Transport[] transport = {
                 new Car("car1", 4),
                 new Car("car2", 4),
@@ -10,10 +24,9 @@ public class Main {
                 new Bicycle("bicycle1", 2),
                 new Bicycle("bicycle2", 2),
         };
-        ServiceStation station = new ServiceStation();
-        for(int i = 0; i < transport.length; i++){
-            station.check(transport[i]);
-            System.out.println();
+        for (Transport value : transport) {
+            String string = value.toString();
+            System.out.println(string);
         }
     }
 }
